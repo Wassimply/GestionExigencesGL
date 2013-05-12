@@ -1,4 +1,27 @@
-<html><center><?php
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;
+        charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="<?php echo
+        $this->baseUrl();?>/styles/design.css" />
+        <?php
+        echo $this->headTitle();
+        echo $this->headScript();
+        echo $this->headStyle();
+        ?>
+    </head>
+
+    <body id="bd">
+         <div id="header">
+           <center><h1>Gestion des exigences</h1></center>
+            <ul id="nav1">
+                <li><a href="http://www.lemonde.fr/">Nouvelles</a></li>
+                <li><a href="http://www.youtube.com/">Videos</a></li>
+                <li><a  href="http://www.esprit.ens.tn/test/v3/index.php?lang=fr">Esprit</a></li>
+                <li><a href="https://www.google.tn/">Google</a></li>
+            </ul>
+        </div><center><html><center><?php
 //cette vue affiche le formulaire d'inscription
 echo $this->formulaireInscri;
 
