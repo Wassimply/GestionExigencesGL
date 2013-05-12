@@ -1,7 +1,28 @@
-<?php
-?>
+<html>
 
-<!-- Nous créons un tableau qui va lister tous les utilisateurs -->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;
+        charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="<?php echo
+        $this->baseUrl();?>/styles/design.css" />
+        <?php
+        echo $this->headTitle();
+        echo $this->headScript();
+        echo $this->headStyle();
+        ?>
+    </head>
+
+    <body id="bd">
+         <div id="header">
+           <center><h1>Gestion des exigences</h1></center>
+          <ul id="nav1">
+                <li><a href="http://www.lemonde.fr/">Nouvelles</a></li>
+                <li><a href="http://www.youtube.com/">Videos</a></li>
+                <li><a  href="http://www.esprit.ens.tn/test/v3/index.php?lang=fr">Esprit</a></li>
+                <li><a href="https://www.google.tn/">Google</a></li>
+            </ul> 
+        </div>
+<!-- Nous crï¿½ons un tableau qui va lister tous les utilisateurs -->
 <center><h1>Liste des managers</h1>
 <table border="1px">
 	<tr bgcolor="#00ff00">
@@ -14,11 +35,11 @@
 		<td>Supprimer</td>
 	</tr>
 <?php
-//foreach permet de parcourir tous les enregistrement d'une base de données
+//foreach permet de parcourir tous les enregistrement d'une base de donnï¿½es
 foreach ($this->users as $user):?>
 <tr>
 		<td> <?php
-		//"escape" est utilisée pour supprimer les espaces s'ils existent
+		//"escape" est utilisï¿½e pour supprimer les espaces s'ils existent
 echo $this->escape($user->nom);
 ?></td>
 		<td> <?php
@@ -34,7 +55,7 @@ echo $this->escape($user->login);
 echo $this->escape($user->password);
 ?></td>
 
-<!-- les 2 cellules qui suivent sont là pour afficher à l'utilisateur la possibilité de modifier ou de supprimer un enregistrement  -->
+<!-- les 2 cellules qui suivent sont lï¿½ pour afficher ï¿½ l'utilisateur la possibilitï¿½ de modifier ou de supprimer un enregistrement  -->
 <td> <a href="<?php echo $this->url(array('controller'=>'Manager','action'=>'edit','id'=>$user->id));?>">Modifier</a></td>
 <td> <a href="<?php echo $this->url(array('controller'=>'Manager','action'=>'delete','id'=>$user->id));?>">Supprimer</a></td>
 	</tr>
